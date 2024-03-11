@@ -1,0 +1,12 @@
+Hi all! In this code I tried to create an application about movies where you can search and like each one from the list.
+For this I used React with TypeScript.
+Used modules for more efficiency: React-router-dom (for taking care of the correct paths in the application), Sass (for styles), Material UI (Components).
+It is possible to click on the 'show more' button for the entire description of the film, and it is also possible to click on the 'show less' button and turn away the text.
+It is possible to search for films by their titles, original language and text by description.
+When the page loads for 2 seconds you see a loading animation, and then it disappears and you already see 10 movies (More is possible).
+After each search, you see how many similar films there are for your request, and of course, when you like, the number of likes changes.
+For a slightly more beautiful look I added the current clock.
+I tried to make a slightly beautiful design in my own way, I don’t know what you think, but it turned out well for me.
+For greater convenience, I did not include the node_modules/ file so that you do not have to wait long during the download. When you have already downloaded this file, go to the Terminal and write the following command:
+(npm i) or (npm install). This command will help you load the node_modules/ file, and then use the code as you wish.
+I hope you enjoy this project of mine, I wish you all unpredictable coding!
