@@ -1,0 +1,369 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+  font-family: Consolas, sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#notFound {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 20px;
+  width: 250px;
+  margin: 20px auto;
+  color: #f00;
+  font-size: 35px;
+  font-style: italic;
+  font-weight: 900;
+}
+#notFound a {
+  text-transform: capitalize;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row nowrap;
+  width: 700px;
+  min-height: 50px;
+  margin: 10px auto;
+}
+.header .clock {
+  width: 100%;
+  max-width: max-content;
+  font-size: 25px;
+  font-weight: 700;
+  font-style: italic;
+  color: mediumblue;
+  border: 2px solid #000;
+  padding: 5px;
+  border-radius: 15px;
+}
+.header > .searchPanel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+  gap: 5px;
+  width: 100%;
+  max-width: 500px;
+}
+.header > .searchPanel > input {
+  width: 100%;
+  max-width: 250px;
+  outline: 0;
+  color: #0c57ff;
+  border: 2px solid #0c57ff;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 0 10px;
+  min-height: 35px;
+}
+.header > .searchPanel > input::placeholder {
+  color: rgba(0, 49, 255, 0.92);
+}
+.header > .searchPanel > button {
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 5px;
+  border: 2px solid green;
+  background-color: lawngreen;
+  border-radius: 15px;
+  color: #000000;
+  font-size: 20px;
+  cursor: pointer;
+}
+.header > .searchPanel > button:hover {
+  color: rgba(0, 49, 255, 0.92);
+}
+.header > .searchPanel > button:active {
+  position: relative;
+  top: 3px;
+  left: 0;
+  overflow: hidden;
+}
+
+.noData {
+  width: 100%;
+  max-width: max-content;
+  margin: 10px auto;
+  border: 2px solid #fff;
+  max-height: 35px;
+}
+.noData > p {
+  font-style: italic;
+  font-weight: 600;
+  transform: scale(1);
+  transition: transform 0.4s linear;
+  animation: pulse 3s linear infinite;
+  text-transform: capitalize;
+  background-color: red;
+  font-size: 25px;
+  border-radius: 10px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+.cardList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 25px;
+  width: 800px;
+  max-width: 800px;
+  margin: 0 auto 10px;
+}
+.cardList .about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  flex-flow: row nowrap;
+}
+.cardList .about .foundMovies,
+.cardList .about .likesCount {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
+  gap: 2px;
+  flex-flow: row nowrap;
+}
+.cardList .about .foundMovies > span,
+.cardList .about .likesCount > span {
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+  color: red;
+}
+.cardList .about .foundMovies {
+  color: darkgreen;
+  font-weight: 800;
+  font-style: italic;
+  font-size: 25px;
+}
+.cardList .cardItem {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  min-height: 350px;
+  max-height: 450px;
+  display: flex;
+  margin: 10px auto;
+  background: azure;
+  box-shadow: 7px 8px 10px #9193d6;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: row nowrap;
+  font-size: 18px;
+  gap: 10px;
+  border-radius: 15px;
+}
+
+.cardList .cardItem:last-child {
+  margin-bottom: 50px;
+}
+
+.cardList .cardItem .likeButton {
+  position: relative;
+  content: none;
+  top: -61px;
+  left: -49px;
+  overflow: hidden;
+  background: white;
+  padding: 10px 10px 5px 10px;
+  display: flex;
+  border: 2px solid #ff0;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 38px;
+  border-radius: 24px;
+  transform: scale(0.9);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.cardList .cardItem .likeButton:active {
+  position: relative;
+  content: none;
+  overflow: hidden;
+  transform: scale(1.1);
+}
+.cardList .cardItem .noImage,
+.cardList .cardItem .movieImage {
+  position: relative;
+  content: none;
+  top: 0;
+  max-width: 280px;
+  max-height: 160px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 0 18px;
+  object-fit: contain;
+  object-position: center;
+  cursor: pointer;
+}
+.cardList .cardItem .noImage:hover,
+.cardList .cardItem .movieImage:hover {
+  filter: drop-shadow(10px 8px 42px gray);
+}
+.cardList .cardItem .movieImage {
+  border: 2px solid #000;
+}
+.cardList .cardItem .noImage {
+  border: 2px solid red;
+}
+.cardList .cardItem .noImage:hover {
+  box-shadow: 10px 8px 42px gray;
+}
+.cardList .cardItem .content {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  max-width: 650px;
+}
+.cardList .cardItem .content .title {
+  background: inherit;
+  font-size: 20px;
+  font-weight: bolder;
+  font-style: italic;
+  text-decoration: underline;
+  margin: 15px auto;
+  text-align: center;
+  width: 200px;
+  max-width: max-content;
+  padding: 0 10px;
+}
+.cardList .cardItem .content .language {
+  font-weight: 700;
+  font-size: 18px;
+  font-style: italic;
+  color: #000055;
+}
+.cardList .cardItem .content .language span {
+  color: #0c57ff;
+}
+.cardList .cardItem .content .releaseDate {
+  font-weight: 700;
+  font-size: 18px;
+  font-style: italic;
+}
+.cardList .cardItem .content .releaseDate span {
+  color: lawngreen;
+}
+.cardList .cardItem .content .descriptionPanel::-webkit-scrollbar-track {
+  border: 1px solid #000;
+  padding: 2px 0;
+  background-color: #0c0cfa;
+}
+.cardList .cardItem .content .descriptionPanel::-webkit-scrollbar {
+  width: 10px;
+}
+.cardList .cardItem .content .descriptionPanel::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  box-shadow: inset 0 0 6px rgba(105, 98, 98, 0.3);
+  background-color: #f1df17;
+  border: 1px solid #000;
+}
+.cardList .cardItem .content .descriptionPanel .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  word-break: break-word;
+  height: 100%;
+  max-height: 160px;
+  min-height: 150px;
+  max-width: max-content;
+  width: 350px;
+  color: #005;
+  margin: 5px auto 10px;
+  visibility: visible;
+}
+.cardList .cardItem .content .descriptionPanel .description .showMoreButton,
+.cardList .cardItem .content .descriptionPanel .description .showLessButton {
+  position: relative;
+  content: "";
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  border: 2px solid #000;
+  background: #fa5050;
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+  font-style: italic;
+  padding: 2px 7px;
+  border-radius: 15px;
+  margin: 5px auto;
+}
+.cardList
+  .cardItem
+  .content
+  .descriptionPanel
+  .description
+  .showMoreButton:active,
+.cardList
+  .cardItem
+  .content
+  .descriptionPanel
+  .description
+  .showLessButton:active {
+  position: relative;
+  content: "";
+  top: 3px;
+  left: 0;
+  overflow: hidden;
+}
+.cardList .cardItem .content .descriptionPanel .description .showMoreButton {
+  border: 2px solid #000;
+  background: #38ff00;
+  color: #000000;
+}
+.cardList .cardItem .content .descriptionPanel .description > span {
+  background-color: inherit;
+  padding: 0 10px;
+  border: 1px solid #000;
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
